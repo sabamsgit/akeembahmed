@@ -1,0 +1,69 @@
+
+/* small to big tablet */
+@media only screen and (max-width: 1200px){
+     .main-nav{
+        display: block;
+     }
+}
+
+/* small phone to big tablet */
+@media only screen and (max-width: 1023px){
+    
+}
+
+/* small phone to small tablet */
+@media only screen and (max-width: 767px){
+    .service-container .col-sm-4{
+        margin-bottom: 20px;
+    }
+    
+    .box-about {
+        margin-bottom: 80px;
+    }
+    
+    .box-about-two {
+        margin-bottom: 0;
+    }
+    
+    .about p {
+        width: 85%;
+        
+    }
+    
+    .main-nav{
+        display: none;
+        float: left;
+    }
+    
+    .main-nav li{
+        display:block;
+        border: 0;
+        border-radius: 0px;      
+    }
+    
+    .main-nav li a:active,
+    .main-nav li a:hover{
+        text-decoration: none;
+        
+    }
+    
+    .mobile-nav-icon i{
+        display: inline-block;
+        margin-right: 20px;
+    }
+    
+    .sticky .mobile-nav-icon i{
+        color:#555;
+    }
+}
+
+
+}
+
+
+/* small phones */
+@media only screen and (max-width: 400px){
+    
+    
+       
+}
