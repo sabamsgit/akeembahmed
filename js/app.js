@@ -57,11 +57,8 @@ $(document).ready(function(){
     });
     
     $('.mobile-nav-icon').click(function(){
-        //var nav = $();
-        //nav.slideToggle(200);
         var nav = $('.main-nav');
-        /*nav.slideToggle(200);*/
-        
+        //nav.slideToggle(200);
         if(!nav.attr('style')){
             nav.show();
         }else{
@@ -72,6 +69,33 @@ $(document).ready(function(){
 //    if($(window).width() > 760){
 //        $('nav ul').css('display', 'block');
 //    }
+    
+    //send mail to my account
+    $('#submit').click(function(){
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var message = $('#message').val();
+        if(name !== '' && email !== '' && message !== ''){
+            //alert("its alright");
+            $.ajax({
+                url:'ajax.php',
+                data:{name:name, email:email, message:message},
+                type:'POST',
+                success:function(data){
+                    if(data == 'Yes'){
+                        alert("Your message has been sent. Thank you.");
+                        $('#name').val("");
+                        $('#email').val("");
+                        $('#message').val("");
+                    }else{
+                       $("#message_div").html(data); 
+                    }
+                }
+            });
+        }else{
+            $("#message_div").html("Please fill all the fields");
+        }
+    });
 
 });
 

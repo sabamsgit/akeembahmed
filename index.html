@@ -103,22 +103,22 @@
             <h2>Leave a message</h2>
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2">
-                    <form method="post" class="contact-form">
+                    <form method="" class="contact-form">
+                        <div id="message_div"></div>
                         <div class="form-div">
-                            <label>Name</label>
+                            <label>Name :</label>
                             <input class="form-control" type="text" name="name" id="name" placeholder="name" required>
                         </div>
                         <div class="form-div">
-                            <label>Email</label>
+                            <label>Email :</label>
                             <input class="form-control" type="email" name="email" id="email" placeholder="email" required>
                         </div>
                         <div class="form-div">
-                            <label>Drop us a line</label>
-                            <textarea name="message" class="form-control" placeholder="Your message">
-                            </textarea>
+                            <label>Drop us a line :</label>
+                            <textarea name="message" id="message" class="form-control" placeholder="Your message"></textarea>
                         </div>
                         <div>
-                            <input class="btn btn-primary pull-right" type="submit" value="Submit" >
+                            <button type="button" class="btn btn-primary pull-right" id="submit" >Submit</button>
                         </div>
                     </form>
                 </div>    
